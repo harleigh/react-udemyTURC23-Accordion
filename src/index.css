@@ -46,6 +46,10 @@ body {
   font-weight: 500;
 }
 
+.header {
+  text-align: center;
+  padding-top: 20px;
+}
 .accordionContents {
   grid-column: 2 / -1; /*start at gridline 2 and...go to the rightmost gridline*/
   padding-bottom: 16px;
