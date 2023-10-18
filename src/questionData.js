@@ -1,4 +1,4 @@
-export const faqs = [
+export const faqsBank = [
   {
     title: "Where are these chairs assembled?",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quaerat temporibus quas dolore provident nisi ut aliquid ratione beatae sequi aspernatur veniam repellendus.",
