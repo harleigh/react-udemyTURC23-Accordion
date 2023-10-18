@@ -2,13 +2,17 @@ import { faqsBank } from "../questionData";
 import { AccordionItem } from "./AccordionItem";
 
 export function Accordion() {
-  return (
-    <div className="accordionCollection">
-      <AccordionItem
-        number={1}
-        title={"Example Title"}
-        contents={"here are the test contents"}
-      />
-    </div>
-  );
+  const buildItems = () => {
+    return faqsBank.map((faq, idx) => {
+      return (
+        <AccordionItem
+          number={idx + 1}
+          title={faq.question}
+          contents={faq.answer}
+          key={crypto.randomUUID()}
+        />
+      );
+    });
+  };
+  return <div className="accordionCollection">{buildItems()}</div>;
 }
