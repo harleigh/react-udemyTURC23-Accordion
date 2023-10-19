@@ -1,8 +1,10 @@
-import { useState } from "react";
-
-export function AccordionItem({ number, title, contents }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export function AccordionItem({
+  number, //faq number (starting at 1)
+  title, //question of the faq
+  contents, //answer of faq
+  isOpen, //is this faq opened?
+  setSelected, //tells parent that this is the selected faq
+}) {
   const displayNumber = () => {
     return number < 9 ? "0" + number.toString() : number.toString();
   };
@@ -11,8 +13,9 @@ export function AccordionItem({ number, title, contents }) {
     return isOpen === true ? "-" : "+";
   };
 
+  //Note: this sets state in the parent, which will cause a refresh :)
   const handleClick = () => {
-    setIsOpen((prevVal) => !prevVal);
+    setSelected(number - 1);
   };
 
   return (
