@@ -15,7 +15,11 @@ export function AccordionItem({
 
   //Note: this sets state in the parent, which will cause a refresh :)
   const handleClick = () => {
-    setSelected(number - 1);
+    if (isOpen === true) {
+      setSelected(null);
+    } else {
+      setSelected(number - 1);
+    }
   };
 
   return (
