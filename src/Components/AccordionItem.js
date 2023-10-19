@@ -16,7 +16,10 @@ export function AccordionItem({ number, title, contents }) {
   };
 
   return (
-    <div className="accordionItem" onClick={handleClick}>
+    <div
+      className={`accordionItem ${isOpen === true ? "open" : ""}`}
+      onClick={handleClick}
+    >
       <p className="accordionNumber">{displayNumber()}</p>
       <p className="accordionTitle">{title}</p>
       <p className="accordionIcon">{displayIcon()}</p>
